@@ -2,7 +2,7 @@
   <img src="frontend/assets/logo.webp" alt="Nemo Logo" width="250" />
   <h1>Nemo - Cryptographic Multi-Agent Consensus</h1>
   <p>
-    <a href="https://nemo-fabric.onrender.com/">🔴 Live Interactive Demo</a>
+    <a href="https://nemo-fabric.onrender.com/">Demo Dasboard</a>
     &nbsp;&middot;&nbsp;
     <a href="#key-features">Features</a>
     &nbsp;&middot;&nbsp;
@@ -213,9 +213,8 @@ The system relies on highly structured, deterministic JSON models for both Incid
 ---
 
 ## Screenshots
+<img width="1883" height="888" alt="Screenshot 2026-07-24 164537" src="https://github.com/user-attachments/assets/dc97494c-a69a-453f-bd05-8831d7242b03" />
 
-<img width="1920" height="1080" alt="Dashboard Active" src="https://placehold.co/1920x1080?text=Dashboard+Screenshot+1" />
-<img width="1920" height="1080" alt="Chaos Injection Alert" src="https://placehold.co/1920x1080?text=Chaos+Injection+Screenshot+2" />
 
 ---
 
