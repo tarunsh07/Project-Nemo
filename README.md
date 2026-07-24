@@ -34,7 +34,6 @@
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
 - [Automated Testing](#automated-testing)
-- [License](#license)
 
 ---
 
@@ -88,11 +87,16 @@ flowchart TD
     A(["Raw Incident Request"]) --> B["Deterministic Fingerprinting (SHA-256 Cache Key)"]
     B --> C{"Accelerator Cache (Fabric Query)"}
     
+    %% Tamper Detection (Read-Time)
+    C -- "Verify Hash Chain" --> Q{"Forensic Tamper Check"}
+    Q -- "Hash Mismatch" --> R(["FabricIntegrityError (System Halt)"])
+    Q -- "Hash Valid" --> S{"Evaluate Confidence"}
+    
     %% Fast Path
-    C -- "Cache Hit (Confidence >= 0.8)" --> D(["Fast Path Resolution (Skip Negotiation)"])
+    S -- "Cache Hit (Confidence >= 0.8)" --> D(["Fast Path Resolution (Skip Negotiation)"])
     
     %% Slow Path
-    C -- "Cache Miss / Low Confidence" --> E["Phase 1: Nash Bargaining (Agent Constraints)"]
+    S -- "Cache Miss / Low Confidence" --> E["Phase 1: Nash Bargaining (Agent Constraints)"]
     
     %% Math Engine
     E --> F{"Check Tolerable Ranges"}
@@ -238,9 +242,3 @@ In an enterprise environment, the architecture must survive catastrophic failure
 ```bash
 pytest -v -s tests/test_fabric_contract.py
 ```
-
----
-
-## License
-
-This project is licensed under the [ISC License](https://opensource.org/licenses/ISC).
