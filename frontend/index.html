@@ -15,9 +15,32 @@
             <img src="assets/logo.webp" alt="Cognition Fabric Logo" style="height: 32px; width: auto; object-fit: contain;">
         </div>
         <div class="status-indicator">
-            <span class="dot"></span> SYSTEM ONLINE
+            <button id="btn-what-is-this" class="btn-text">[ HOW IT WORKS ]</button>
         </div>
     </header>
+
+    <!-- Modal Overlay -->
+    <div id="info-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Architecture Overview</h2>
+                <button id="btn-close-modal" class="btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Nemo</strong> is a deterministic memory architecture designed for multi-agent AI systems. When AI agents encounter ambiguous or novel incidents, traditional systems rely on slow, expensive runtime negotiation.</p>
+                <p>This architecture solves this by introducing a <strong>Ratchet Effect</strong>: it learns from successful negotiations and mathematically builds confidence in successful outcomes over time, eventually skipping negotiation entirely for known incident patterns.</p>
+                <p>Initial consensus is forced using a deterministic <strong>Nash Bargaining Engine</strong>. All memory is then protected by a tamper-evident cryptographic ledger, ensuring malicious agents cannot bypass global policy guardrails.</p>
+                <hr>
+                <h3>How to Test (Chaos Engineering)</h3>
+                <ul>
+                    <li><strong>[ TRIGGER INCIDENT ]</strong>: Simulates an event requiring agent consensus. Watch the Confidence meter build.</li>
+                    <li><strong>[ SIMULATE OUTAGE ]</strong>: Takes an agent offline. The system will fall back to safe constraints.</li>
+                    <li><strong>[ POISON LEDGER ]</strong>: Directly hacks the underlying data. The Fabric will instantly detect the broken SHA-256 hash chain and halt.</li>
+                    <li><strong>[ INVALIDATE POLICY ]</strong>: Bumps the global epoch. Watch the system reject previously verified cache hits.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <main class="grid-container">
         <!-- LEFT COLUMN -->

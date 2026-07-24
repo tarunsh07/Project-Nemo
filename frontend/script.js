@@ -219,3 +219,25 @@ document.getElementById('btn-reset').addEventListener('click', async () => {
 // Initial fetch and poll
 fetchLedger();
 setInterval(fetchLedger, 2000);
+
+// Modal Logic
+const modal = document.getElementById('info-modal');
+const btnWhatIsThis = document.getElementById('btn-what-is-this');
+const btnCloseModal = document.getElementById('btn-close-modal');
+
+if (btnWhatIsThis && modal && btnCloseModal) {
+    btnWhatIsThis.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    btnCloseModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    // Close if clicking outside the modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+}

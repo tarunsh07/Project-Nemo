@@ -1,19 +1,8 @@
 <div align="center">
-  <img src="frontend/assets/logo.webp" alt="Cognition Fabric Logo" width="250" />
-  <h1>Cognition Fabric - Deterministic AI Memory Layer</h1>
-  <p><strong>A robust, tamper-evident memory architecture featuring fallback CSP negotiation, cryptographic verification, and asynchronous corroboration.</strong></p>
-
+  <img src="frontend/assets/logo.webp" alt="Nemo Logo" width="250" />
+  <h1>Nemo - Cryptographic Multi-Agent Consensus</h1>
   <p>
-    <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-    <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
-    <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-    <img src="https://img.shields.io/badge/Pytest-8.0+-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest">
-  </p>
-
-  <p>
-    <a href="#getting-started">Getting Started</a>
+    <a href="https://nemo-fabric.onrender.com/">🔴 Live Interactive Demo</a>
     &nbsp;&middot;&nbsp;
     <a href="#key-features">Features</a>
     &nbsp;&middot;&nbsp;
@@ -37,11 +26,10 @@
 
 ---
 
-## About the Project
+## The Solution
 
-**Cognition Fabric** is a deterministic memory architecture designed for multi-agent AI systems. When AI agents encounter ambiguous or novel incidents, traditional systems rely on slow, expensive runtime negotiation. 
-
-This architecture solves this by introducing a **Ratchet Effect**: it learns from successful negotiations and mathematically builds confidence in successful outcomes over time, eventually skipping negotiation entirely for known incident patterns. All memory is protected by a tamper-evident cryptographic ledger, ensuring malicious agents cannot bypass global policy guardrails.
+**Nemo** replaces soft LLM judging with hard cryptography and game theory. 
+It acts as an immutable, tamper-evident middleware layer. Agents do not communicate directly; they submit cryptographically signed constraints to the Fabric. The Fabric uses a deterministic **Nash Bargaining Math Engine** to force consensus. If consensus is reached, it is hashed, chained to the previous state, and written to an append-only Ledger. It learns from successful negotiations and mathematically builds confidence in successful outcomes over time, eventually skipping negotiation entirely for known incident patterns. All memory is protected by a tamper-evident cryptographic ledger, ensuring malicious agents cannot bypass global policy guardrails.
 
 ---
 
