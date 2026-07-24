@@ -230,5 +230,5 @@ In an enterprise environment, the architecture must survive catastrophic failure
 
 **Run tests via Pytest:**
 ```bash
-pytest -v -s tests/test_fabric_contract.py
+python -m pytest -v -s tests/test_fabric_contract.py
 ```
