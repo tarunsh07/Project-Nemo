@@ -9,6 +9,3 @@ data/
 node_modules/
 dist/
 
-# Interview Prep / Notes
-help.md
-example.md
