@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognition Fabric</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="assets/logo.webp" alt="Cognition Fabric Logo" style="height: 32px; width: auto; object-fit: contain;">
+        </div>
+        <div class="status-indicator">
+            <span class="dot"></span> SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+            <section class="panel">
+                <h2 class="section-title">COMMANDS</h2>
+                
+                <!-- Core Tests (2x2 Grid) -->
+                <div class="button-grid tests-grid">
+                    <div class="cmd-group">
+                        <button id="btn-incident" class="btn">[ TRIGGER INCIDENT ]</button>
+                        <span class="cmd-desc">Test 1: Drive Consensus</span>
+                    </div>
+                    <div class="cmd-group">
+                        <button id="btn-partition" class="btn">[ SIMULATE OUTAGE ]</button>
+                        <span class="cmd-desc">Test 2: Fallback Resilience</span>
+                    </div>
+                    <div class="cmd-group">
+                        <button id="btn-poison" class="btn">[ POISON LEDGER ]</button>
+                        <span class="cmd-desc">Test 3: Break Crypto Hash</span>
+                    </div>
+                    <div class="cmd-group">
+                        <button id="btn-epoch" class="btn">[ INVALIDATE POLICY ]</button>
+                        <span class="cmd-desc">Test 4: Cache Rejection</span>
+                    </div>
+                </div>
+
+                <!-- Utilities (3x1 Grid) -->
+                <div class="button-grid utility-grid">
+                    <div class="cmd-group">
+                        <button id="btn-onboard" class="btn">[ INJECT AGENT ]</button>
+                        <span class="cmd-desc">Zero-Shot Learning</span>
+                    </div>
+                    <div class="cmd-group">
+                        <button id="btn-heal" class="btn">[ HEAL NETWORK ]</button>
+                        <span class="cmd-desc">Restore Nodes</span>
+                    </div>
+                    <div class="cmd-group">
+                        <button id="btn-reset" class="btn">[ WIPE LEDGER ]</button>
+                        <span class="cmd-desc">Reset System</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="panel">
+                <h2 class="section-title">ACTIVE NODES</h2>
+                <ul id="agent-list" class="agent-list">
+                    <li><span class="node-icon">◆</span> AGENT-1-THROUGHPUT</li>
+                    <li><span class="node-icon">◆</span> AGENT-2-SECURITY</li>
+                </ul>
+            </section>
+
+            <section class="panel log-panel">
+                <h2 class="section-title">TERMINAL OUTPUT</h2>
+                <div id="log-container" class="log-content">
+                    <div class="log-line info">System booted successfully.</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-right">
+            <section class="panel ledger-panel">
+                <h2 class="section-title">IMMUTABLE LEDGER</h2>
+                <div class="ledger-header">
+                    <span>HASH ID</span>
+                    <span>STATE</span>
+                    <span>CONFIDENCE</span>
+                </div>
+                <div id="ledger-content" class="ledger-content">
+                    <!-- Records injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

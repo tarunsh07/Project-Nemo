@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+# Local Data
+data/
+*.jsonl
+
+# Node
+node_modules/
+dist/
+
+# Interview Prep / Notes
+help.md
+example.md
