@@ -82,6 +82,7 @@ This architecture solves this by introducing a **Ratchet Effect**: it learns fro
 The extension follows a **Dual-Path Execution Model** with a strict separation of concerns, heavily prioritizing cryptographic integrity and statistical anomaly detection.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "stepAfter"}}}%%
 flowchart TD
     %% Main Entry
     A(["Raw Incident Request"]) --> B["Deterministic Fingerprinting (SHA-256 Cache Key)"]
@@ -111,7 +112,7 @@ flowchart TD
     %% Guardrails
     J --> K{"Phase 2: Guardrails"}
     K -- "Epoch & Rule Checks" --> L{"Z-Score Anomaly (3-Sigma Gate)"}
-    K -- "Check Failed" --> M(["Discarded"])
+    K -- "Check Failed" --> M(["Discarded / Quarantined"])
     L -- "Hallucination (Z > 3)" --> M
     
     %% Ledger Write & Hash Chaining
@@ -120,7 +121,8 @@ flowchart TD
     
     %% The Ratchet Feedback Loop
     O --> P["Asynchronous Worker (Real-World Validation)"]
-    P -. "Ratchet Effect (Confidence +0.075)" .-> C
+    P -. "Success (Confidence +0.075)" .-> C
+    P -. "Failure (Confidence -0.15)" .-> M
 ```
 
 ---
