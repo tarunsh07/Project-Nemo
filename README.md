@@ -192,8 +192,8 @@ The system relies on highly structured, deterministic JSON models for both Incid
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cognition-fabric.git
-   cd cognition-fabric
+   git clone https://github.com/tarunsh07/Project-Nemo.git
+   cd Project-Nemo
    ```
 
 2. **Install dependencies**
